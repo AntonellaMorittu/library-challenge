@@ -2,7 +2,6 @@ require 'yaml'
 require 'date'
 
 class Library
-
   attr_accessor :collection
 
   def initialize
@@ -18,7 +17,6 @@ class Library
   end
 
   def check_out(title, author)
-      #define a variable
       book = search(title, author)
       if does_not_exists?(book)
         return "This book is not in our catalogue."
@@ -26,7 +24,7 @@ class Library
         return "This book is not available."
       else
         check_out_book(book)
-        { title: title, author: author, message: "Item successfully booked.", return_date: return_date }
+      { title: title, author: author, message: "Item successfully booked.", return_date: return_date }
       end
   end
 
@@ -46,5 +44,4 @@ class Library
   def return_date
     Date.today.next_month(1).strftime("%m/%Y")
   end
-
 end

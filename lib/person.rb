@@ -2,7 +2,6 @@ require 'yaml'
 require 'date'
 
 class Person
-
   attr_accessor :booklist
 
   def initialize
@@ -14,5 +13,4 @@ class Person
                    author: checked_out_book[:author],
                    return_date: checked_out_book[:return_date])
   end
-  
 end
